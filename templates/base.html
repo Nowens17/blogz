@@ -6,13 +6,24 @@
             .error {
                 color: red;
             }
+
+            h1 {
+                text-align:center;
+            }
+
+            .textarea {
+                height: 200px;
+                width: 200px;
+            }
+
         </style>
     </head>
     <body>
-        <h1>
+        <h2>
             <a href="/">Main Blog Page</a>
             <a href="/newpost">Add a Blog Entry</a>
-        </h1>
+            <a href="/blog">Build a Blog</a>
+        </h2>
 
         {% block content %}
         {% endblock %}

@@ -2,11 +2,11 @@
 
 {% block content %}
 
-<h2>Blogs</h2>
-<content>
-    {% for blog in Blogs %}
-    <p>{{blog}}</p>
+<h1>Build a Blog</h1>
+    {% for blog in blogs %}
+    <a href="/individual-blog?id={{blog.id}}">{{blog.title}}</a>
+    <p>{{blog.content}}</p> 
+    <br>
     {% endfor %}
-</content>
 
 {% endblock %}
