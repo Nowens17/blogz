@@ -19,10 +19,23 @@
         </style>
     </head>
     <body>
+        <div>
+            <a href="/logout">log out</a>
+            <a href="/login">log in</a>
+        </div>
+
+        {% with messages = get_flashed_messages() %}
+            <ul>
+            {% for message in messages %}
+                <li>{{message}}</li>
+            {% endfor %}
+            </ul>
+        {% endwith %}
+
         <h2>
-            <a href="/">Main Blog Page</a>
+            <a href="/">Home Page</a>
+            <a href="/blog">All Blogs</a>
             <a href="/newpost">Add a Blog Entry</a>
-            <a href="/blog">Build a Blog</a>
         </h2>
 
         {% block content %}
